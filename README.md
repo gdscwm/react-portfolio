@@ -322,7 +322,7 @@ For our next step, you are going to import an image of yourself (preferably a pr
 
 ```js
 import Image from 'next/image';
-import dev_ed from '../public/dev-ed-wave.png';
+import kathy from '../public/kathy.jpg';
 ```
 
 Then, start a new `div` and add an `Image` component with the `src` as the image you imported.
