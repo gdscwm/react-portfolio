@@ -234,7 +234,7 @@ But the Resume button is still unstyled and too close to the dark mode icon. Let
 </li>
 ```
 
-Here's some [examples of a good resume](https://www.overleaf.com/latex/templates/jakes-resume/syzfjbzwjncs) to keep in mind.
+**Extra:** Here's some [examples of a good resume](https://www.overleaf.com/latex/templates/jakes-resume/syzfjbzwjncs) to keep in mind.
 
 <!-- Return to your `tailwind.config.js` file and add the custom font family you downloaded to the theme. 
 
