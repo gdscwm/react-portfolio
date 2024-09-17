@@ -8,7 +8,8 @@ import {
 } from 'react-icons/ai';
 import Image from 'next/image';
 import kathy from '../public/kathy-rowe.jpg';
-import web1 from '../public/web1.png'
+import web1 from '../public/web1.png';
+import wm from '../public/historic-campus-aerial.jpg';
 
 export const metadata: Metadata = {
   title: 'Kathy Rowe Portfolio',
@@ -25,7 +26,7 @@ export default function Page() {
       <main className='bg-white px-10'>
         <section className='min-h-screen'>
           <nav className='py-10 mb-12 flex justify-between'>
-            <h1 className='text-xl'>Kathy Rowe</h1>
+            <h1 className='text-xl font-semibold'>Kathy Rowe</h1>
             <ul className='flex items-center'>
               <li>
                 <BsFillMoonStarsFill className='cursor-pointer text-2xl'/>
@@ -58,7 +59,9 @@ export default function Page() {
             </div>
           </div>
         </section>
-        <section className='flex justify-center items-center min-h-screen'>
+
+        {/* EDUCATION */}
+        <section className='flex justify-center items-center'>
           <div className='flex flex-col items-start space-y-4 p-6 bg-white rounded-lg w-full max-w-4xl'>
             <h3 className='text-lg text-blue-600 font-bold'>EDUCATION</h3>
             <div className='flex justify-between w-full h-auto'>
@@ -69,17 +72,20 @@ export default function Page() {
                 MAY 2026
               </p>
             </div>
-            <div>
-              <div className='flex flex-col space-y-2'>
-                <p className='text-m text-gray-600 italic'>
-                  Bachelor's of Science in Computer Science
-                </p>
-                <p className='text-sm text-gray-600'>
-                  Coursework: Computational Problem Solving, Calculus II
-                </p>
-              </div>
+            <div className='flex flex-col space-y-2'>
+              <p className='text-m text-gray-600 italic'>
+                Bachelor's of Science in Computer Science
+              </p>
+              <p className='text-sm text-gray-600'>
+                Coursework: Computational Problem Solving, Calculus II
+              </p>
             </div>
-            <div className='flex justify-between w-full h-auto'>
+
+            {/* <div className='flex-shrink-0'>
+              <Image src={wm} alt='Education Image' />
+            </div> */}
+
+            <div className='flex justify-between w-full h-auto mt-4'>
               <p className='text-lg font-semibold'>
                 Random High School
               </p>
@@ -93,12 +99,14 @@ export default function Page() {
                   High School Diploma
                 </p>
                 <p className='text-sm text-gray-600'>
-                  Coursework: AP Computer Science A, CS Programming, Web Page Development, Calculus II
+                  Coursework: AP Computer Science A, CS Programming, Web Page Development, Calculus I
                 </p>
               </div>
             </div>
           </div>
         </section>
+
+        {/* EXPERIENCE */}
         <section className='flex justify-center items-center min-h-screen'>
           <div className='flex flex-col items-start space-y-4 p-6 bg-white rounded-lg w-full max-w-4xl'>
             <h3 className='text-lg text-blue-600 font-bold'>EXPERIENCE</h3>
@@ -127,6 +135,8 @@ export default function Page() {
             </div>
           </div>
         </section>
+
+        {/* PROJECTS */}
         <section className='flex justify-center items-center min-h-screen'>
           <div className='flex flex-col items-start space-y-4 p-6 bg-white rounded-lg w-full max-w-4xl'>
             <h3 className='text-lg text-blue-600 font-bold'>PROJECTS</h3>
