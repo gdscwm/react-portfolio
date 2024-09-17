@@ -47,6 +47,9 @@ If `/usr/local/bin` is missing from the output, add it to your `$PATH` by editin
 export PATH=/usr/local/bin:$PATH
 ```
 
+if on M1/M2 Mac run ```export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm```
+
 ### Start Next.js app
 
 If you have a directory for workshops, navigate there. If not, then create a new directory for your workshops:
