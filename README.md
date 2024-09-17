@@ -254,7 +254,7 @@ Now, we can apply our custom font to the title of the nav bar we just made, whic
 Let's move on to the main page. Under the `nav` element, create a new `div`. This will be the container for everything within this section.
 
 ```js
-<div className='flex justify-center items-center h-[65vh]'>
+<div className='flex justify-center items-center h-[65vh]'></div>
 ```
 
 The classes above just ensure that everything is centered perfectly, both vertically and horizontally.
@@ -368,20 +368,88 @@ Before we move on, let's check that this is our final product.
 
 Now that you have the main page done, let's move on to the second section! This will be where you put all your education, which should include college (and high school if you are a freshmen or sophomore).
 
-Start off with creating a new `div`.
+Start off with creating a new `section`. This will serve as the container holding all the elements we use for this page.
 
 ```js
-
+<section>
+  <div>
+    <h3>EDUCATION</h3>
+  </div>
+</section>
 ```
 
-<hr/>
+Next, add these styling classes.
 
+```js
+<section className='flex justify-center items-center'>
+  <div className='flex flex-col items-start space-y-4 p-6 bg-white rounded-lg w-full max-w-4xl'>
+    <h3 className='text-lg text-blue-600 font-bold'>EDUCATION</h3>
+  </div>
+</section>
+```
+
+Now, we have a title, but nothing else. Let's add the schools you went to and which years you went to them as text, using the `<p>` tag. 
+
+The following code should be placed after the heading (this line: `<h3 className='text-lg text-blue-600 font-bold'>EDUCATION</h3>`).
+
+```js
+<div className='flex justify-between w-full h-auto'>
+  <p className='text-lg font-semibold'>
+    College of William and Mary
+  </p>
+  <p className='text-sm text-gray-800 font-bold text-right'>
+    MAY 2026
+  </p>
+</div>
+```
+
+But this text looks a little lonely... why don't we put some more information? For example, like your major(s)/minor and any classes relevant to your desired career.
+
+If you haven't declared a major yet, you can put down whichever major(s) you're most strongly considering, or the major(s) that you applied with.
+
+```js
+<div className='flex flex-col space-y-2'>
+  <p className='text-m text-gray-600 italic'>
+    Bachelor's of Science in Computer Science
+  </p>
+  <p className='text-sm text-gray-600'>
+    Coursework: Computational Problem Solving, Calculus II
+  </p>
+</div>
+```
+
+**Freshmen & sophomores:** You can replicate this and add your high school experience. Here's an example.
+
+```js
+<div className='flex justify-between w-full h-auto'>
+  <p className='text-lg font-semibold'>
+    Random High School
+  </p>
+  <p className='text-sm text-gray-800 font-bold text-right'>
+    MAY 2022
+  </p>
+</div>
+<div className='flex justify-between w-full'>
+  <div className='flex flex-col space-y-2'>
+    <p className='text-m text-gray-600 italic'>
+      High School Diploma
+    </p>
+    <p className='text-sm text-gray-600'>
+      Coursework: AP Computer Science A, CS Programming, Web Page Development, Calculus I
+    </p>
+  </div>
+</div>
+```
+
+# End of Workshop 1! Come back for part 2 next Tuesday! •ᴗ•
+
+<!-- <hr/>
 
 ### Creating the experience page
 
 Now that you have the education page done, let's move on to the third section! This will be where you put all your experience.
 
-To make things faster, simply copy over the Education section here and change the header and contents to match your previous work experience.
+To make things faster, simply copy over the Education section here and remove all of the code specific to that section.
 
 ```js
 
@@ -403,13 +471,15 @@ Start off with creating a new `div`.
 ```js
 
 ```
+-->
 
 <hr/>
 
 ## Credit
 
 This workshop was inspired by the following resources:
-- developedbyed's [React Portfolio Website With Tailwind Tutorial](https://www.youtube.com/watch?v=k-Pi5ZMxHWY) on YouTube
+- developedbyed's [React Portfolio Website With Tailwind Tutorial](https://www.youtube.com/watch?v=k-Pi5ZMxHWY) on YouTube.
+- compiletab's [React Portfolio Website With Tailwind Tutorial](https://www.youtube.com/watch?v=_63mEm3AMSY&t=1772s) on YouTube.
 - [Stefan Topalovic's portfolio](https://www.stefantopalovic.com/).
 
 <hr/>
