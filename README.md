@@ -40,6 +40,7 @@ To add a variable to your path in Windows:
 
    Click “New” and add the folder you extracted. The directory is probabaly: C:\Program Files\nodejs\bin
 
+Mac/Linux:
 If `/usr/local/bin` is missing from the output, add it to your `$PATH` by editing your `~/.zprofile` file and adding the following line:
 
 ```bash
