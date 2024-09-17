@@ -104,15 +104,7 @@ Configuring the paths to all your content files tells Tailwind about every singl
 
 ### Grab images
 
-Ensure you are not within the `react-portfolio` project directory. Once you have, to clone the images you need for this project, go to the GitHub repository and click the green `Code` button. Clone using the web URL (HTTPS) with this command:
-
-```bash
-git clone <repository-url>
-```
-
-There should just be one folder called `public`. Move this one folder into your `react-portfolio` project directory. 
-
-The easiest way to do this is via file explorer by dragging the folder into your project directory, then returning to your project folder in the command line and deleting the cloned repository manually.
+Go to [this repository](https://github.com/gdscwm/portfolio-assets) to grab the images you need for this project. Directions are in the `README`.
 
 ### Start server
 
