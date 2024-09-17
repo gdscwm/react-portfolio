@@ -19,9 +19,26 @@ npx next --version
 
 If Node.js is not installed, download it from Node.js official website here: https://nodejs.org/en. After installation, verify that `/usr/local/bin` is in your `$PATH`:
 
+
 ```bash
 echo $PATH
 ```
+
+To add a variable to your path in Windows:
+
+   Right-click on the Start Button
+
+   Select “System” from the context menu.
+
+   Click “Advanced system settings”
+
+   Go to the “Advanced” tab
+
+   Click “Environment Variables…”
+
+   Click variable called “Path” and click “Edit…”
+
+   Click “New” and add the folder you extracted. The directory is probabaly: C:\Program Files\sqlite\bin
 
 If `/usr/local/bin` is missing from the output, add it to your `$PATH` by editing your `~/.zprofile` file and adding the following line:
 
