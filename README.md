@@ -6,7 +6,9 @@ In this workshop, we will be using the following technologies to build a portfol
 - **Next.js**: A React framework that allows you to build React apps by providing the features that React is missing out of the box, such as a router, data fetching, server-side rendering, and bundling.
 - **Tailwind CSS**: A CSS framework with a "utility-first" approach, designed for fast development and easy maintenance, that integrates well with component-based UI frameworks like React.
 
-**Credit:** developedbyed's [React Portfolio Website With Tailwind Tutorial](https://www.youtube.com/watch?v=k-Pi5ZMxHWY) on YouTube and [Stefan Topalovic's portfolio](https://www.stefantopalovic.com/).
+For a more thorough breakdown of these technologies, watch the following brief videos:
+- [React in 100 seconds](https://www.youtube.com/watch?v=mr15Xzb1Ook)
+- [Tailwind in 100 seconds](https://www.youtube.com/watch?v=Tn6-PIqc4UM)
 
 ## Prerequisites
 
@@ -412,6 +414,13 @@ Start off with creating a new `div`.
 
 <hr/>
 
+## Credit
+
+This workshop was inspired by the following resources:
+- developedbyed's [React Portfolio Website With Tailwind Tutorial](https://www.youtube.com/watch?v=k-Pi5ZMxHWY) on YouTube
+- [Stefan Topalovic's portfolio](https://www.stefantopalovic.com/).
+
+<hr/>
 
 ## More information
 
