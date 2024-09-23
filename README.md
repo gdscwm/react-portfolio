@@ -190,6 +190,8 @@ Then, add the following lines of code to the top of the `globals.css` file to in
 @tailwind utilities;
 ```
 
+# End of Workshop One.
+
 <!-- We can also customize the font by including this code after the previous classes. This font should be stored within the `public` folder that you downloaded earlier.
 
 ```js
@@ -416,10 +418,6 @@ But this text looks a little lonely... why don't we put some more information? F
 
 If you haven't declared a major yet, you can put down whichever major(s) you're most strongly considering, or the major(s) that you applied with.
 
-```js
-
-```
-
 <hr/>
 
 
@@ -428,10 +426,6 @@ If you haven't declared a major yet, you can put down whichever major(s) you're 
 Now that you have the education page done, let's move on to the third section! This will be where you put all your experience.
 
 To make things faster, simply copy over the Education section here and remove all of the code specific to that section.
-
-```js
-
-```
 
 <hr/>
 
@@ -444,11 +438,6 @@ If you are a CS major or intend to work in the computer science field, this will
 
 If you are not, this is a great place to put research, writing samples, etc.
 
-Start off with creating a new `div`.
-
-```js
-
-```
 -->
 
 <hr/>
