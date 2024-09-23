@@ -6,13 +6,10 @@ In this workshop, we will be using the following technologies to build a portfol
 - **Next.js**: A React framework that allows you to build React apps by providing the features that React is missing out of the box, such as a router, data fetching, server-side rendering, and bundling.
 - **Tailwind CSS**: A CSS framework with a "utility-first" approach, designed for fast development and easy maintenance, that integrates well with component-based UI frameworks like React.
 
-<<<<<<< HEAD
 For a more thorough breakdown of these technologies, watch the following brief videos:
 - [React in 100 seconds](https://www.youtube.com/watch?v=mr15Xzb1Ook)
 - [Tailwind in 100 seconds](https://www.youtube.com/watch?v=Tn6-PIqc4UM)
 
-=======
->>>>>>> main
 ## Prerequisites
 
 ### Install Node.js
@@ -26,46 +23,16 @@ npx next --version
 
 If Node.js is not installed, download it from Node.js official website here: https://nodejs.org/en. After installation, verify that `/usr/local/bin` is in your `$PATH`:
 
-<<<<<<< HEAD
-=======
-
->>>>>>> main
 ```bash
 echo $PATH
 ```
 
-<<<<<<< HEAD
-=======
-To add a variable to your path in Windows:
-
-   Right-click on the Start Button
-
-   Select “System” from the context menu.
-
-   Click “Advanced system settings”
-
-   Go to the “Advanced” tab
-
-   Click “Environment Variables…”
-
-   Click variable called “Path” and click “Edit…”
-
-   Click “New” and add the folder you extracted. The directory is probabaly: C:\Program Files\nodejs\bin
-
-Mac/Linux:
->>>>>>> main
 If `/usr/local/bin` is missing from the output, add it to your `$PATH` by editing your `~/.zprofile` file and adding the following line:
 
 ```bash
 export PATH=/usr/local/bin:$PATH
 ```
 
-<<<<<<< HEAD
-=======
-if on M1/M2 Mac run ```export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm```
-
->>>>>>> main
 ### Start Next.js app
 
 If you have a directory for workshops, navigate there. If not, then create a new directory for your workshops:
@@ -80,11 +47,8 @@ npx create-next-app@latest
 ```
 
 On installation, you'll see the following prompts. Respond to all (we recommend you choose the default values):
-<<<<<<< HEAD
 
 ```bash
-=======
->>>>>>> main
 What is your project named? portfolio
 Would you like to use TypeScript? Yes
 Would you like to use ESLint? Yes
@@ -93,7 +57,6 @@ Would you like your code inside a src/ directory? No
 Would you like to use App Router? (recommended) Yes
 Would you like to use Turbopack for next dev? No
 Would you like to customize the import alias (@/* by default)? No
-<<<<<<< HEAD
 ```
 
 After the prompts, `create-next-app` will create a new folder with your project name and install the necessary dependencies.
@@ -139,23 +102,6 @@ module.exports = {
 ```
 
 Configuring the paths to all your content files tells Tailwind about every single file in your project that contains any Tailwind class names so that it can scan all your files for class names and generate all of the corresponding CSS for those styles.
-=======
-
-After the prompts, `create-next-app` will create a new folder with your project name and install the necessary dependencies.
-
-
-### Install Tailwind CSS
-
-Install Tailwind CSS via `npm` and create the configuration file:
-
-```bash
-npm install -D tailwindcss
-npx tailwindcss init
-```
-
-We create our own configuration file in case we want to customize our media query breakpoints, add custom colors or fonts, or otherwise fine-tune our Tailwind CSS configuration later.
-
->>>>>>> main
 
 ### Grab images
 
@@ -165,13 +111,9 @@ Ensure you are not within the `react-portfolio` project directory. Once you have
 git clone <repository-url>
 ```
 
-<<<<<<< HEAD
 There should just be one folder called `public`. Move this one folder into your `react-portfolio` project directory. 
 
 The easiest way to do this is via file explorer by dragging the folder into your project directory, then returning to your project folder in the command line and deleting the cloned repository manually.
-=======
-There should just be one folder called `public`. Move this one folder into your `react-portfolio` project directory. The easiest way to do this is via file explorer by dragging the folder into your project directory, then returning to your project folder in the command line and deleting the cloned repository manually.
->>>>>>> main
 
 ### Start server
 
@@ -186,11 +128,7 @@ This will start a local development server at port 3000 by default. In simpler t
 **Tip:** Split your windows between your code editor/IDE and the local development server to see real-time updates.
 
 
-<<<<<<< HEAD
 ## Some more setup
-=======
-## Begin coding
->>>>>>> main
 
 Before we begin building this portfolio, let's download some React icons for later. Run the following command:
 
@@ -198,7 +136,6 @@ Before we begin building this portfolio, let's download some React icons for lat
 npm i react-icons
 ````
 
-<<<<<<< HEAD
 If you're using VSCode as your code editor, now is the time to add the Tailwind CSS extension! 
 
 > **Optional:** Simply go down the sidebar on the left until you're hovering over the Extensions icon, click the icon, and then search for "Tailwind." Install the first extension, which should be called "Tailwind CSS IntelliSense."
@@ -210,22 +147,12 @@ If you're using VSCode as your code editor, now is the time to add the Tailwind 
 Now, from the open project directory, look for the `app` folder. Inside the app folder, find and open up the `page.tsx` file. After you clear away all the existing content, write the following lines of code.
 
 ```js
-=======
-From the sidebar, look for the `app` folder. Inside the app folder, find and open up the `page.tsx` file. After you clear away all the existing content, write the following lines of code.
-
-```bash
-
->>>>>>> main
 // Type definition that helps manage metadata
 import type { Metadata } from 'next'
  
 // Defines some metadata, e.g. sets title
 export const metadata: Metadata = {
-<<<<<<< HEAD
   title: 'Kathy Rowe Portfolio',
-=======
-  title: 'My Portfolio',
->>>>>>> main
 }
  
 // Creates functional component Page
@@ -233,11 +160,7 @@ export default function Page() {
   return (
     <div>
       <>
-<<<<<<< HEAD
         <title>Kathy Rowe Portfolio</title>
-=======
-        <title>My Portfolio</title>
->>>>>>> main
         <meta name="description" content="Generated by create-next-app" />
         <link rel="icon" href="/favicon.ico" />
       </>
@@ -249,16 +172,9 @@ export default function Page() {
 
 One thing we need to do to get Tailwind working is to open up `globals.css` file and add some changes.
 
-<<<<<<< HEAD
 Remove this entire rule (since we will later use Tailwind to make our own media queries).
 
 ```js
-=======
-Remove this entire block of code (since we will later use Tailwind to make our own)
-
-```bash
-
->>>>>>> main
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -266,34 +182,21 @@ Remove this entire block of code (since we will later use Tailwind to make our o
 }
 ```
 
-<<<<<<< HEAD
 Then, add the following lines of code to the top of the `globals.css` file to include all the neccessary classes and utilities to make our Tailwind code functional.
 
 ```js
-=======
-Then, add the following lines of code to the top of the `globals.css` file to include all the neccessary classes and components for Tailwind.
-
-```bash
->>>>>>> main
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 ```
 
-<<<<<<< HEAD
 <!-- We can also customize the font by including this code after the previous classes. This font should be stored within the `public` folder that you downloaded earlier.
 
 ```js
-=======
-We can also customize the font by including this code after the previous classes.
-
-```bash
->>>>>>> main
 @font-face {
     font-family: 'burtons';
     src: url('../public/Burtons.otf');
 }
-<<<<<<< HEAD
 ``` -->
 
 ## Begin coding
@@ -516,15 +419,10 @@ If you haven't declared a major yet, you can put down whichever major(s) you're 
 ```js
 
 ```
-=======
-```
-
->>>>>>> main
 
 <hr/>
 
 
-<<<<<<< HEAD
 ### Creating the experience page
 
 Now that you have the education page done, let's move on to the third section! This will be where you put all your experience.
@@ -565,9 +463,6 @@ This workshop was inspired by the following resources:
 <hr/>
 
 ## More information
-=======
-# More information
->>>>>>> main
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
