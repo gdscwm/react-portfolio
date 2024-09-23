@@ -135,7 +135,7 @@ module.exports = {
 
 Configuring the paths to all your content files tells Tailwind about every single file in your project that contains any Tailwind class names so that it can scan all your files for class names and generate all of the corresponding CSS for those styles.
 
-### Grab images
+### Grab images (optional)
 
 Ensure you are not within the `react-portfolio` project directory. Once you have, to clone the images you need for this project, go to the GitHub repository and click the green `Code` button. Clone using the web URL (HTTPS) with this command:
 
