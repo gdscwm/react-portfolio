@@ -12,16 +12,48 @@ For a more thorough breakdown of these technologies, watch the following brief v
 
 ## Prerequisites
 
-### Install Node.js
+### Install npm
 
-Make sure you have Node.js (and by extension, Next.js) installed. Check your versions with the following commands:
+#### Checking your version of npm and Node.js
+
+To see if you already have Node.js (and by extension, Next.js) and npm installed and to check the installed version, run the following commands:
 
 ```bash
-node --version
+node -v
+npm -v
 npx next --version
 ```
 
-If Node.js is not installed, download it from Node.js official website here: https://nodejs.org/en. After installation, verify that `/usr/local/bin` is in your `$PATH`:
+#### Using a Node package manager to install Node.js and npm
+
+If you don't have Node.js adn npm installed, you can use a Node installer to install both Node.js and npm on your system.
+
+- [Node.js installer](https://nodejs.org/en/download/package-manager)
+- [NodeSource installer](https://github.com/nodesource/distributions)
+
+If you use Linux, we recommend that you use a NodeSource installer.
+
+##### OS X or Windows Node installers
+
+If you're using OS X or Windows, use one of the installers from the [Node.js download page](https://nodejs.org/en/download/). Make sure to install the version labeled LTS.
+
+##### Linux or other operating systems Node installers
+
+If you're using Linux or another operating system, use one of the following installers:
+
+- [NodeSource installer](https://github.com/nodesource/distributions) (recommended)
+- One of the installers on the [Node.js download page](https://nodejs.org/en/download/)
+- Or see [this page](https://nodejs.org/en/download/package-manager/) to install npm for Linux in the way many Linux developers prefer.
+
+Make sure you have Node.js (and by extension, Next.js) installed. Check your versions with the following commands:
+
+#### Using a prebuilt installer to install Node.js and npm
+
+If you're unable or uncomfortable with installing Node.js and npm from the command line, feel free to use the prebuilt to download Node.js to your laptop [here](https://nodejs.org/en/download/prebuilt-installer).
+
+### Check that you can use Node.js and npm from the command line
+
+After installation, verify that `/usr/local/bin` is in your `$PATH`:
 
 ```bash
 echo $PATH
@@ -35,7 +67,7 @@ export PATH=/usr/local/bin:$PATH
 
 ### Start Next.js app
 
-If you have a directory for workshops, navigate there. If not, then create a new directory for your workshops:
+If you have a directory for workshops, navigate there using the command `cd`. If not, then create a new directory for your workshops:
 ```bash
 mkdir gdsc-workshops
 ```
