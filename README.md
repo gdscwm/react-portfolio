@@ -438,8 +438,6 @@ If you are a CS major or intend to work in the computer science field, this will
 
 If you are not, this is a great place to put research, writing samples, etc.
 
--->
-
 <hr/>
 
 ## Credit
