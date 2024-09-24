@@ -241,6 +241,10 @@ We're going to start with a nav bar that contains a title, an icon for dark mode
 
 To do this, first import the icon for dark mode from the React icons package we previously downloaded at the top of the file.
 
+```js
+import { BsFillMoonStarsFill } from 'react-icons/bs';
+```
+
 Then, create a new `<section>` from within our `<main>` element to enclose the nav bar. Add the `nav` element with the new section and give it a title, which will be your full name. From within that nav bar, add a `<ul>` tag, which is where the dark mode icon and the button are going to go. We want the nav bar to fill up the page horizontally and for there to be some padding, so apply classes to style the elements on the page.
 
 ```js
