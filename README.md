@@ -461,9 +461,40 @@ If you haven't declared a major yet, you can put down whichever major(s) you're 
 
 Now that you have the education page done, let's move on to the third section! This will be where you put all your experience.
 
-To make things faster, simply copy over the Education section here and remove all of the code specific to that section.
+To make things faster, simply copy over the Education section here and remove all of the text specific to that section. Here's an example of what that might look like.
 
 <hr/>
+
+```js
+<section className='flex justify-center items-center min-h-screen'>
+  <div className='flex flex-col items-start space-y-4 p-6 bg-white rounded-lg w-full max-w-4xl'>
+    <h3 className='text-lg text-blue-600 font-bold'>EXPERIENCE</h3>
+    <div className='flex justify-between w-full h-auto'>
+      <p className='text-lg font-semibold'>
+        Target
+      </p>
+      <p className='text-sm text-gray-800 font-bold text-right'>
+        SEP 2021 – AUG 2026
+      </p>
+    </div>
+    <div className='flex justify-between w-full'>
+      <div className='flex flex-col space-y-2'>
+        <p className='text-sm text-gray-600 italic'>
+          Guest Advocate, Cart/Store Attendant
+        </p>
+        <ul className='list-disc list-inside space-y-2 text-gray-600'> 
+          <li className='text-sm text-gray-600'>
+            Enhanced guest experience by welcoming, thanking, and exceeding service expectations.
+          </li>
+          <li className='text-sm text-gray-600'>
+            Focused on guest interaction and effective resolution of service issues.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+```
 
 
 ### Creating the portfolio
@@ -474,13 +505,324 @@ If you are a CS major or intend to work in the computer science field, this will
 
 If you are not, this is a great place to put research, writing samples, etc.
 
+We will build this out step by step during the in-person workshop, but to cut things short here, this is how it should resemble.
+
+```js
+{/* PROJECTS */}
+<div className='flex flex-col items-start space-y-4 p-6 rounded-lg w-full max-w-6xl'>
+<h3 className='text-lg text-blue-600 font-bold'>PROJECTS</h3>
+</div> 
+<section className='flex justify-center items-center min-h-full'>
+  <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
+    <div className="basis-1/3 flex-1 ">
+      <h3 className='text-m text-blue-600 font-bold'>Portfolio Website</h3>
+      <Image
+        className="rounded-lg object-cover"
+        layout="responsive"
+        alt="project image"
+        src={web1}
+      />
+    </div>
+    <div className="basis-1/3 flex-1">
+    <Image
+        className="rounded-lg object-cover"
+        layout="responsive"
+        alt="project image"
+        src={web2}
+      />
+    </div>
+    <div className="basis-1/3 flex-1">
+    <Image
+        className="rounded-lg object-cover"
+        layout="responsive"
+        alt="project image"
+        src={web3}
+      />
+    </div>
+    <Image
+        className="rounded-lg object-cover"
+        layout="responsive"
+        alt="project image"
+        src={web4}
+      />
+    <div className="basis-1/3 flex-1">
+    <Image
+        className="rounded-lg object-cover"
+        layout="responsive"
+        alt="project image"
+        src={web5}
+      />
+    </div>
+    <div className="basis-1/3 flex-1">
+    <Image
+        className="rounded-lg object-cover"
+        layout="responsive"
+        alt="project image"
+        src={web6}
+      />
+    </div>
+  </div>
+</section>
+```
+
+<hr />
+
+Certainly! I'll modify the README to reflect the changes and improvements we've discussed. Here's an updated version of the "Adding responsive web design" section:
+
+## Implementing responsive web design 
+
+When creating your portfolio, one thing to keep in mind is making sure that it is responsive to a variety of devices and renders well no matter the window or screen size of the device.
+
+### Responsive padding
+
+   Adjust padding based on screen size to optimize space usage:
+
+   ```jsx
+   <main className='bg-white px-4 sm:px-10 md:px-20 lg:px-40'>
+   ```
+
+   This provides less padding on mobile devices and gradually increases it for larger screens.
+
+### Responsive typography
+
+   Adjust font sizes for different screen sizes:
+
+   ```jsx
+   <h2 className='text-lg sm:text-xl py-2 text-blue-600 font-semibold'>KATHY ROWE</h2>
+   <h3 className='text-2xl sm:text-3xl py-2 text-gray-800 font-black'>28th President of William & Mary 👋</h3>
+   ```
+
+   This ensures readable text on small screens while allowing for larger, more impactful text on bigger screens.
+
+### Consistent paragraph layout
+
+   Set a maximum width and center the text for a more consistent shape and alignment:
+
+   ```jsx
+   <p className='text-sm sm:text-md py-3 sm:py-5 text-gray-800 max-w-lg mx-auto sm:mx-0'>
+     Nationally recognized as an innovator in higher education,
+     I champion the liberal arts, entrepreneurship and
+     strengthening education-workforce pathways.
+   </p>
+   ```
+
+   The `max-w-lg` class sets a maximum width, while `mx-auto` centers the text on small screens. `sm:mx-0` aligns it to the left on larger screens.
+
+### Responsive images
+
+   Adjust image size based on screen size:
+
+   ```jsx
+   <div className='bg-gradient-to-b from-blue-600 rounded-full w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 relative overflow-hidden mb-6 sm:mb-0 flex-shrink-0'>
+     <Image src={kathy} alt='profile_pic' layout='fill' objectFit='cover' />
+   </div>
+   ```
+
+   This progressively increases the image size as the screen gets larger, ensuring it looks good on all devices.
+
+### Responsive layout
+
+   Adjust the layout for different screen sizes:
+
+   ```jsx
+   <div className='flex flex-col-reverse sm:flex-row justify-center items-center min-h-[65vh]'>
+     <div className='text-center sm:text-left p-4 sm:p-10 w-full sm:w-1/2'>
+       {/* Content here */}
+     </div>
+     {/* Image div here */}
+   </div>
+   ```
+
+   This stacks the content vertically on small screens and switches to a side-by-side layout on larger screens.
+
+### Responsive icons
+
+   Adjust icon sizes and spacing for different screen sizes:
+
+   ```jsx
+   <div className='flex justify-center sm:justify-start py-3'>
+     <div className='flex gap-4 sm:gap-6 md:gap-8 lg:gap-10'>
+       <a href='https://www.linkedin.com/in/katherine-rowe-2a711545' className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-gray-800 hover:text-blue-600 transition-colors'>
+         <AiFillLinkedin />
+       </a>
+       {/* Other icons */}
+     </div>
+   </div>
+   ```
+
+   This adjusts the icon size and spacing between icons based on screen size, while also adding hover effects for better interactivity.
+
+By implementing these responsive design techniques, your portfolio will look great and function well across a wide range of devices, from mobile phones to large desktop screens.
+
+## Adding dark mode
+
+Go back to the top of the `page.tsx` file and add this import statement.
+
+```js
+import { useState } from 'react';
+```
+
+> `useState` is a React Hook that lets you add a state variable to your component and returns an array with exactly two values:
+>
+> 1. The current state. During the first render, it will match the initialState you have passed.
+> 2. The set function that lets you update the state to a different value and trigger a re-render.
+>
+> Because `useState` is a Hook, you can only call it at the top level of your component or your own Hooks. You can’t call it inside loops or conditions. If you need to do that, extract a new component and move the state into it. Interested in learning more? Read the React docs here: https://react.dev/reference/react/useState.
+
+Now, go to the top of the `Page` function responsible for rendering your portfolio and initialize a state variable to manage dark mode enabling.
+
+```js
+export default function Page() {
+  const [darkMode, setDarkMode] = useState(false);
+```
+
+Tailwind should already be able to check your system preferences or browser settings to see if you're in dark mode and adapt accordinly, but what we want to be able to toggle between dark and light mode by clicking this button. To do that, you need to modify the `tailwind.config.js` file. 
+
+What adding this line in `module.exports` means is that you now are able to toggle dark mode based off a class and not anything externally. To trigger this, all you need to do is add a class name to the entire web app.
+
+```js
+return (
+    <div className={darkMode ? 'dark' : ''}>
+```
+
+Adding this class will likely trigger an error if you have Next.js 13+ installed. This is because, by default, all components in the App Router are Server Components where these APIs are not available. By defining the "use client" directive in toggle.js, you can tell React to enter the client boundary where these APIs are available.
+
+To fix this, add this line to the very top of your file, even before all the import statements. 
+
+```js
+'use client'
+```
+
+Read up on the Next.js docs if you're curious about what caused this error:  https://nextjs.org/docs/app/building-your-application/rendering/client-components.
+
+Now, locate the line where the dark mode icon resides and add the following code.
+
+```js
+<BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className='cursor-pointer text-2xl'/>
+```
+
+This adds an `onClick` event whenever this icon is clicked and sets it to an arrow function that toggles dark mode.
+
+Then, you're going to add the following classes to some of your elements to style this page when it's in dark mode.
+
+```js
+<main className='bg-slate-50 px-4 sm:px-10 md:px-20 lg:px-40 dark:bg-gray-900'>
+```
+
+```js
+<nav className='py-6 sm:py-10 mb-8 sm:mb-12 flex flex-col sm:flex-row justify-between items-center dark:text-white'>
+```
+
+```js
+<h3 className='text-2xl py-2 text-gray-800 font-black  dark:text-white'>28th President of William & Mary 👋</h3>
+<p className='text-md py-3 sm:py-5 text-gray-800 max-w-lg mx-auto sm:mx-0 dark:text-white'>
+  Nationally recognized as an innovator in higher education,
+  I champion the liberal arts, entrepreneurship and
+  strengthening education-workforce pathways.
+</p>
+```
+
+```js
+<div className='text-3xl sm:text-4xl md:text-5xl flex justify-center sm:justify-start gap-8 py-3 text-gray-800 dark:text-white'>
+  <a href='https://www.linkedin.com/in/katherine-rowe-2a711545' className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-gray-800 hover:text-blue-600 transition-colors dark:text-white'>
+    <AiFillLinkedin />
+  </a>
+  <a href='https://x.com/williamandmary' className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-gray-800 hover:text-blue-400 transition-colors dark:text-white'>
+    <AiFillTwitterCircle />
+  </a>
+  <a href='https://www.github.com/gdscwm' className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-gray-800 hover:text-gray-600 transition-colors dark:text-white'>
+    <AiFillGithub />
+  </a>
+  <a href='mailto:president@wm.edu' className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-gray-800 hover:text-red-500 transition-colors dark:text-white'>
+    <AiFillMail />
+  </a>
+</div>
+```
+
+The last two sections feature more extensive modifications, so there are detailed in full below.
+
+```js
+{/* EDUCATION */}
+<section className='flex justify-center items-center'>
+  <div className='flex flex-col items-start space-y-4 p-6 bg-white rounded-lg w-full max-w-4xl dark:bg-gray-800'>
+    <h3 className='text-lg text-blue-600 font-bold'>EDUCATION</h3>
+    <div className='flex justify-between w-full h-auto'>
+      <p className='text-lg font-semibold dark:text-white'>
+        College of William and Mary
+      </p>
+      <p className='text-sm text-gray-800 font-bold text-right dark:text-white'>
+        MAY 2026
+      </p>
+    </div>
+    <div className='flex flex-col space-y-2'>
+      <p className='text-m text-gray-600 italic dark:text-white'>
+        Bachelor's of Science in Computer Science
+      </p>
+      <p className='text-sm text-gray-600 dark:text-white'>
+        Coursework: Computational Problem Solving, Calculus II
+      </p>
+    </div>
+    <div className='flex justify-between w-full h-auto mt-4'>
+      <p className='text-lg font-semibold dark:text-white'>
+        Random High School
+      </p>
+      <p className='text-sm text-gray-800 font-bold text-right dark:text-white'>
+        MAY 2022
+      </p>
+    </div>
+    <div className='flex justify-between w-full'>
+      <div className='flex flex-col space-y-2'>
+        <p className='text-m text-gray-600 italic dark:text-white'>
+          High School Diploma
+        </p>
+        <p className='text-sm text-gray-600 dark:text-white'>
+          Coursework: AP Computer Science A, CS Programming, Web Page Development, Calculus I
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+```
+
+```js
+{/* EXPERIENCE */}
+<section className='flex justify-center items-center min-h-screen'>
+  <div className='flex flex-col items-start space-y-4 p-6 bg-white rounded-lg w-full max-w-4xl dark:bg-gray-800'>
+    <h3 className='text-lg text-blue-600 font-bold'>EXPERIENCE</h3>
+    <div className='flex justify-between w-full h-auto'>
+      <p className='text-lg font-semibold dark:text-white'>
+        Target
+      </p>
+      <p className='text-sm text-gray-800 font-bold text-right dark:text-white'>
+        SEP 2021 – AUG 2026
+      </p>
+    </div>
+    <div className='flex justify-between w-full'>
+      <div className='flex flex-col space-y-2'>
+        <p className='text-sm text-gray-600 italic dark:text-white'>
+          Guest Advocate, Cart/Store Attendant
+        </p>
+        <ul className='list-disc list-inside space-y-2 text-gray-600'> 
+          <li className='text-sm text-gray-600 dark:text-white'>
+            Enhanced guest experience by welcoming, thanking, and exceeding service expectations.
+          </li>
+          <li className='text-sm text-gray-600 dark:text-white'>
+            Focused on guest interaction and effective resolution of service issues.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+```
+
 <hr/>
 
 ## Credit
 
 This workshop was inspired by the following resources:
 - developedbyed's [React Portfolio Website With Tailwind Tutorial](https://www.youtube.com/watch?v=k-Pi5ZMxHWY) on YouTube.
-- compiletab's [React Portfolio Website With Tailwind Tutorial](https://www.youtube.com/watch?v=_63mEm3AMSY&t=1772s) on YouTube.
+<!-- compiletab's [React Portfolio Website With Tailwind Tutorial](https://www.youtube.com/watch?v=_63mEm3AMSY&t=1772s) on YouTube. -->
 - [Stefan Topalovic's portfolio](https://www.stefantopalovic.com/).
 
 <hr/>
