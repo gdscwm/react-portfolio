@@ -567,8 +567,6 @@ We will build this out step by step during the in-person workshop, but to cut th
 
 <hr />
 
-Certainly! I'll modify the README to reflect the changes and improvements we've discussed. Here's an updated version of the "Adding responsive web design" section:
-
 ## Implementing responsive web design 
 
 When creating your portfolio, one thing to keep in mind is making sure that it is responsive to a variety of devices and renders well no matter the window or screen size of the device.
