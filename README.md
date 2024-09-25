@@ -737,7 +737,7 @@ Then, you're going to add the following classes to some of your elements to styl
 </div>
 ```
 
-The last two sections feature more extensive modifications, so there are detailed in full below.
+The last two sections feature more extensive modifications, so they are detailed in full below.
 
 ```js
 {/* EDUCATION */}
