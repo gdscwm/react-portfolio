@@ -1,4 +1,4 @@
-# GDSC Fall 2024 Workshop #3: Building a Portfolio Website
+# GDSC Fall 2024 Workshop Series: Building a Portfolio Website
 
 In this workshop, we will be using the following technologies to build a portfolio web application:
 
@@ -410,6 +410,7 @@ Before we move on, let's check that this is our final product.
   </div>
 </div>
 ```
+# End of Workshop Two.
 
 ### Creating the education page
 
